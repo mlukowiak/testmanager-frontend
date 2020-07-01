@@ -1,0 +1,22 @@
+
+    
+
+
+<div class="collection">
+    <div class="collection-header"><h1>Lista scenariuszy</h1></div>
+    <form>
+
+          <div class="input-field">
+            <input id="icon_prefix" type="text" class="validate">
+            <label for="icon_prefix">Szukaj</label>
+
+        </div>
+      </form>
+    <div *ngFor="let scenario of scenarios" (click)="scenarioClicked(scenario)">
+        <a class="collection-item">{{scenario.scenarioTitle}}</a>
+    </div>
+</div>
+
+   
+
+

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  
+  <title>TestManager</title>
+
+  <!-- CSS  -->
+  </head>
+<body>
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo center">TestManager</a>
+    </div>
+  </nav>
+  
+  <div class="main-row">
+    
+    <div class="col s12 m4 l3 left">
+      <app-scenario-list [scenarios]="scenarios" (selectScenario)="selectScenario($event)"></app-scenario-list>
+    </div>
+    <div class="col s12 m8 l9 right">
+      <app-scenario-details [scenario]="this.selectedScenario"></app-scenario-details>
+      <!--
+      <app-scenario-form></app-scenario-form>
+      <app-case-list></app-case-list>
+      <app-case-form></app-case-form>
+      <app-comment-list></app-comment-list>
+      <app-comment-form></app-comment-form>
+      -->
+
+    </div>
+  </div>
+
+  <footer class="page-footer">
+  
+    <div class="footer-copyright">
+      <div class="container">
+      Autor: Michał Łukowiak
+      </div>
+    </div>
+  </footer>
+
+  </body>
+</html>
+
+
+
+
+

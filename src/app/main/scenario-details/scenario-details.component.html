@@ -1,0 +1,58 @@
+<div *ngIf="scenario">
+    <div class="collection">
+        <div class="collection-header">
+            <h1>Szczegóły scenariusza</h1>
+        </div>
+        <div>
+            <b>Nazwa:</b> {{ scenario?.scenarioTitle }}  <i class="material-icons">edit</i><i class="material-icons">delete</i><br>
+            <b>Data utworzenia:</b> {{ scenario?.scenarioDate | date:'MM/dd/yyyy HH:mm:ss' }}<br>
+            <b>Autor:</b> {{ scenario?.scenarioAuthor }}<br>
+            <b>Ocena:</b> <i class="material-icons" [ngClass]="{'orange600': scenario.avg_ratings > 0}">star</i>
+            <i class="material-icons" [ngClass]="{'orange600': scenario.avg_ratings > 1}">star</i>
+            <i class="material-icons" [ngClass]="{'orange600': scenario.avg_ratings > 2}">star</i>
+            <i class="material-icons" [ngClass]="{'orange600': scenario.avg_ratings > 3}">star</i>
+            <i class="material-icons" [ngClass]="{'orange600': scenario.avg_ratings > 4}">star</i>
+            ({{ scenario.ratings_number }})<br>
+            <b>Typ:</b> {{ scenario?.scenarioType }}<br>
+            <b>Obszar:</b> {{ scenario?.scenarioArea }}<br>
+            <b>Opis:</b> {{ scenario?.scenarioDescription }}<br>
+            <b>Czynności przygotowawcze:</b> {{ scenario?.scenarioInitial }}<br>
+            <b>Czynnosci końcowe:</b> {{ scenario?.scenarioFinal }}<br><br>
+
+            <b>Oceń scenariusz:</b>
+            <div id="rate-container">
+                <i *ngFor="let rate of [1,2,3,4,5]" class="material-icons" (mouseenter)="rateHover(rate)"
+                (mouseleave)="rateHovered = 0" (click)="rateClicked(rate)"
+                [ngClass]="{'lol': rateHovered >= rate}"
+                >star</i>
+            </div>
+
+            <div class="collection-header">
+                <h1>Komentarze</h1>
+            </div>
+
+            <form>
+                  <div class="input-field">
+                    <textarea id="textarea1" class="materialize-textarea"></textarea>
+                    <label for="textarea1">Dodaj komentarz</label>
+                  </div>
+            </form>
+            
+            <b>User</b>, 04/23/2020 09:05:03<br>Bardzo dobry scenariusz! Trafne przypadki testowe!
+            
+            
+
+
+
+        </div>
+    </div>
+</div>
+    
+<div class="fixed-action-btn horizontal" style="bottom: 45px; right: 24px;">
+    <a data-target="modal1" class="btn-floating btn-large red" href="#modal1">
+        <b>+</b>
+    </a>
+</div>
+
+
+    

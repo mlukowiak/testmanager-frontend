@@ -1,0 +1,30 @@
+.collection{
+    border:none;
+    
+}
+
+.collection-item {
+    color: black;
+    background-color: #f6f8fa;
+}
+
+.collection a.collection-item{
+    color: black;
+}
+
+.collection a.collection-item:not(.active):hover{
+    background-color: #e1e4e8;
+}
+
+h4{
+    padding-left: 4%;
+}
+
+.input-field{
+    padding-left: 4%;
+    padding-right: 5%;
+}
+
+label{
+    padding-left: 4%;
+}

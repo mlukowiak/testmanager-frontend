@@ -1,0 +1,24 @@
+.collection{
+    border:none;
+}
+
+.material-icons{
+    display: inline-flex;
+    vertical-align: middle;
+}
+
+.material-icons.orange600 { 
+    color: #FB8C00; 
+}
+
+form{
+    padding-right: 10px;
+}
+
+.material-icons.lol { 
+    color: orange; 
+}
+
+#rate-container i{
+    cursor:pointer;
+}

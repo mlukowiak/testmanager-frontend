@@ -1,0 +1,27 @@
+
+.nav-wrapper{
+    background-color: #24292e;
+}
+
+.main-row {
+    height: calc(100vh - 17vh)
+}
+
+.left {
+    height: 100%;
+    width: 20%;
+    border-right: 1px solid #e1e4e8;
+    padding-bottom: 0%;
+    background-color: #f6f8fa;
+  }
+  
+.right {
+    height: 100%;
+    width: 80%;
+    padding-left:1%;
+    padding-bottom: 0%;
+}
+
+.page-footer{
+    background-color: #24292e;
+}
